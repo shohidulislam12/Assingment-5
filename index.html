@@ -32,15 +32,114 @@
 </script>
 
 </head>
-<body class="font-[Lexend] ">
-    
+<body class="font-[Lexend]  mx-auto  ">
+<section class="sticky top-0 overflow-hidden block ">
+    <nav class="flex justify-between py-10 bg-[#F9F7F3] text-xl lg:text-3xl px-5 lg:px-20">
+        <h1 class="btn bg-primary ">Blog</h1>
+        <h1 class="flex  items-center gap-4"><img src="./assets/logo.png" alt=""> Donate Bangladesh</h1>
+        <h1 class="flex  items-center gap-4"> <img src="./assets/coin.png" alt=""><span id="amount">5500.0</span> BDT</h1>
+    </nav>
+    <div class="flex justify-center text-xl lg:text-2xl mt-10 gap-7">
+        <button id="Donationbtn" class="bg-primary  btn">Donation</button>
+        <button id="historybtn" class="text-gray-500   btn">History</button>
+    </div>
+</section>
+<!-- section 1 -->
+<section id="sec1" class="p-5 px-5 lg:px-20 " >
+<div class="grid grid-cols-1 p-5 gap-10 lg:grid-cols-2 py-10  mx-auto border border-gray-300   rounded-xl">
+    <div class="flex justify-center">
+        <img class="w-[90%]" src="./assets/noakhali.png" alt="">
+    </div>
+    <div class="">
+        <p class="bg-[#1111110D] my-7 rounded-xl w-[120px] flex gap-1 p-3"><img src="./assets/coin.png" alt=""><span id="fundCollectNoakhali">0</span>BDT</p>
+        <h1 class="text-2xl my-7">Donate for Flood at Noakhali, Bangladesh</h1>
+        <p class="text-[#111111B3] my-10">Before donating, it’s good to ensure the authenticity of the organization and the campaign. If you are local, you might also be able to contribute through grassroots initiatives.
+            Before donating, it’s good to ensure the authenticity of the organization and the campaign. If you are local, you might also be able to contribute through grassroots initiatives.</p>
+            <input
+            id="Noakhaliinput"
+      type="text"
+      placeholder="Write Donation Amount"
+      class="input input-bordered input-md w-full " />
+      <button id="NoakhaliBtn" class="bg-primary btn w-full my-5">Donate Now</button>
+    </div>
+</div>
+</section>
+
+<!-- section 2-->
+<section id="sec2" class="p-5  px-5 lg:px-20">
+<div class="grid grid-cols-1 p-5 gap-10 lg:grid-cols-2 py-10  mx-auto border border-gray-300   rounded-xl">
+    <div class="flex justify-center">
+        <img class="w-[90%]" src="./assets/noakhali.png" alt="">
+    </div>
+    <div class="">
+        <p class="bg-[#1111110D] my-7 rounded-xl w-[120px] flex gap-1 p-3"><img src="./assets/coin.png" alt=""><span id="fundCollectFeni">0</span>BDT</p>
+        <h1 class="text-2xl my-7">Donate for Flood Relief in Feni,Bangladesh</h1>
+        <p class="text-[#111111B3] my-10">Floods have devastated Feni, Bangladesh, leaving countless families displaced and in urgent need of help. To support relief efforts in this region, several organizations are working tirelessly to provide food, clean water, shelter, and medical aid to those affected. BRAC, one of the largest non-governmental organizations in the country, is actively involved in offering disaster relief. The Bangladesh Red Crescent Society (BDRCS) also plays a crucial role in delivering emergency services during such crises. In addition, charitable foundations like Bidyanondo Foundation and global organizations like Save the Children are mobilizing resources to help flood victims. </p>
+            <input
+      type="text" id="Feniinput"
+      placeholder="Write Donation Amount"
+      class="input input-bordered input-md w-full " />
+      <button id="FeniBtn" class="bg-primary btn w-full my-5">Donate Now</button>
+    </div>
+</div>
+</section>
+
+<!-- section 3 -->
+<section id="sec3" class=" p-5  px-5 lg:px-20">
+<div class="grid grid-cols-1 gap-10 lg:grid-cols-2 py-10 p-5 mx-auto border border-gray-300   rounded-xl">
+    <div class="flex justify-center">
+        <img class="w-[90%]" src="./assets/noakhali.png" alt="">
+    </div>
+    <div class="">
+        <p class="bg-[#1111110D] my-7 rounded-xl w-[120px] flex gap-1 p-3"><img src="./assets/coin.png" alt=""><span id="fundCollecQuotaMovement">0</span>BDT</p>
+        <h1 class="text-2xl my-7">Aid for Injured in the Quota Movement</h1>
+        <p class="text-[#111111B3] my-10">If you are looking to contribute to the aid of the injured from the Quota Movement, it's important to connect with trusted sources. Student organizations, local relief efforts, and rights groups may be coordinating support, and some universities may have set up specific funds for affected students. Verifying the credibility of these efforts is crucial before making any donations. Your support can help ensure that the injured receive the necessary care and financial assistance to recover from the aftermath of the protests.</p>
+            <input
+      type="text" id="QuotaMovementinput"
+      placeholder="Write Donation Amount"
+      class="input input-bordered input-md w-full " />
+      <button id="QuotaMovementBtn" class="bg-primary btn w-full my-5">Donate Now</button>
+    </div>
+</div>
+</section>
+
+<!-- history -->
+<section id="history" class="p-10 lg:px-40 py-5 hidden">
 
 
-<h2>regg5r</h2>
+
+</section>
 
 
+<!-- history end  -->
+
+
+
+<!-- modal end -->
+ <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box text-center flex flex-col items-center gap-3">
+    <h3 class="text-lg font-bold">Congrates!</h3>
+    <p class="flex justify-center"><img src="./assets/coin.png" alt=""></p>
+    <p class="py-4">You have denoted for human kind </p>
+    <h2>Sucessful</h2>
+    <div class="modal-action">
+      <form method="dialog" class="  ">
+        <!-- if there is a button in form, it will close the modal -->
+        <button  class="btn ">Close Confatmation</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+<!-- modal -->
+
+<footer class="bg-[#F9F7F3] h-32">
+
+</footer>
 
 
     <script src="./index.js"></script>
+    
 </body>
 </html>
