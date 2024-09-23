@@ -8,26 +8,36 @@ const  sec3=document.getElementById('sec3');
 function getNumberofAmount(id){
   const number=document.getElementById(id);
   const number_todigit=parseFloat(number.value);
-
+const input=number.value;
   const remainamount=parseFloat(amount.innerText)-number_todigit;
-if(remainamount<0){
 
-    alert('you have not  Sufficient balance');
+
+//validation input 
+var regExp = /[^0-9.]/g;
+if (!regExp.test(input)){
  
-   return null;
- }
- else  if(number_todigit>0){
-    amount.innerText=remainamount;
+  if(number_todigit>0 && remainamount>=0){
+      amount.innerText=remainamount;
+  
+      number.value='';
+       return number_todigit;
+      
+    }
+   else 
 
-    number.value='';
-     return number_todigit;
-    
+      alert('you have not  Sufficient balance');
+   number.value='';
+     return null;
+   
+  
   }
+ else {
+    alert("enter correct amount");
+    number.value='';
+    return null ;
+  } 
 
-else 
-number.value='';
- alert("you cannaot donat this amount");
- return  null;
+
 }
 
 //section -1 for noakhali
@@ -58,10 +68,11 @@ history.appendChild(div)
 const fundCollectFeni=document.getElementById('fundCollectFeni');
 const FeniDonationButton=document.getElementById('FeniBtn');
 FeniDonationButton.addEventListener('click',function(event){
+  const Feniinput=getNumberofAmount('Feniinput');
     event.preventDefault();
-    if(Noakhaliinput !==null){
+    if(Feniinput !==null){
       document.getElementById('my_modal_1').showModal();
-    const Feniinput=getNumberofAmount('Feniinput');
+
     const totalfundCollectFeni=Feniinput+parseFloat(fundCollectFeni.innerText)
    fundCollectFeni.innerText=totalfundCollectFeni;
    const div=document.createElement('div');
@@ -81,9 +92,10 @@ const fundCollectQuotaMovement=document.getElementById('fundCollecQuotaMovement'
 const QuotaMovementDonationButton=document.getElementById('QuotaMovementBtn');
 QuotaMovementDonationButton.addEventListener('click',function(event){
     event.preventDefault();
-    if(Noakhaliinput !==null){
-      document.getElementById('my_modal_1').showModal();
     const  QuotaMovementinput=getNumberofAmount('QuotaMovementinput');
+    if(QuotaMovementinput !==null){
+      document.getElementById('my_modal_1').showModal();
+  
     const totalfundCollectQuotaMovement=QuotaMovementinput+parseFloat(fundCollectQuotaMovement.innerText)
    fundCollectQuotaMovement.innerText=totalfundCollectQuotaMovement;
   
@@ -98,6 +110,7 @@ QuotaMovementDonationButton.addEventListener('click',function(event){
    `
    history.appendChild(div)
     }
+  
 })
 //history section
 const Donationbtn=document.getElementById('Donationbtn');
@@ -127,3 +140,30 @@ Donationbtn.addEventListener('click',function(event){
    sec3.classList.remove('hidden');
 }
 )
+//homebtn 
+const homebtn=document.getElementById('homebtn');
+const blogbtn=document.getElementById('blogbtn');
+blogbtn.addEventListener('click',function(event){
+  event.preventDefault();
+  homebtn.classList.remove('hidden');
+ blogbtn.classList.add('hidden');
+ history.classList.add('hidden');
+ sec1.classList.add('hidden');
+ sec2.classList.add('hidden');
+ sec3.classList.add('hidden');
+ faq.classList.remove("hidden")
+
+})
+const faq=document.getElementById('faq')
+homebtn.addEventListener('click',function(event){
+  event.preventDefault();
+  blogbtn.classList.remove('hidden')
+  homebtn.classList.add('hidden');
+    history.classList.add('hidden');
+    sec1.classList.remove('hidden');
+    sec2.classList.remove('hidden');
+    sec3.classList.remove('hidden');
+    faq.classList.remove('faq');
+    faq.classList.add("hidden")
+
+})
