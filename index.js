@@ -4,6 +4,7 @@ const amount=document.getElementById('amount');
 const  sec1=document.getElementById('sec1');
 const  sec2=document.getElementById('sec2');
 const  sec3=document.getElementById('sec3');
+const faq=document.getElementById('faq')
 //get input all by function
 function getNumberofAmount(id){
   const number=document.getElementById(id);
@@ -125,6 +126,7 @@ historybtn.addEventListener('click',function(event){
     sec1.classList.add('hidden');
     sec2.classList.add('hidden');
     sec3.classList.add('hidden');
+    faq.classList.add('hidden');
 }
 )
 //donation btn
@@ -154,7 +156,7 @@ blogbtn.addEventListener('click',function(event){
  faq.classList.remove("hidden")
 
 })
-const faq=document.getElementById('faq')
+
 homebtn.addEventListener('click',function(event){
   event.preventDefault();
   blogbtn.classList.remove('hidden')
@@ -163,7 +165,7 @@ homebtn.addEventListener('click',function(event){
     sec1.classList.remove('hidden');
     sec2.classList.remove('hidden');
     sec3.classList.remove('hidden');
-    faq.classList.remove('faq');
+
     faq.classList.add("hidden")
 
 })
